@@ -1,1 +1,31 @@
+package 输出n个素数;
+import java.util.Scanner;
+public class Prime
+{
+	public static void main(String[] args) 
+	{
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+	    int count=0;
+		int m=1;
+		while(count<n)
+		{
+			boolean isPrime=true;
+			m++;
+			for(int i=2;i<m;i++)
+			{
+				if(m%i==0)
+				{
+					isPrime=false;
+					break;
+				}
+			}
+			if(isPrime)
+			{
+				System.out.print(m+"  ");
+				count++;
+			}		
+		}
+	}
+}
 
